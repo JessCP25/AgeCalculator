@@ -69,7 +69,7 @@ main{
     height: auto;
     border-radius: 25px;
     border-bottom-right-radius: 80px;
-    padding: 55px 56px;
+    padding: 56px 56px;
 }
 .inputDate{
     display: flex;
@@ -79,17 +79,17 @@ main{
 .inputDate__part{
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 .inputDate__part label{
     font-size: 1.4rem;
     color: var(--smokey-grey);
     font-weight: 700;
     letter-spacing: 3px;
+    margin-bottom: 8px;
 }
 .inputDate__part input{
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 800;
     height: 72px;
     outline: none;
     border: none;
@@ -97,7 +97,18 @@ main{
     padding: 23px;
     border-radius: 8px;
     width: 185px;
+    padding-bottom: 27px;
 }
+.inputDate__part input:focus{
+    border: 1px solid var(--purple);
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] { -moz-appearance:textfield; }
 .container__medium{
     display: flex;
     align-items: center;
@@ -109,13 +120,17 @@ main{
 }
 .container__icon{
     background-color: var(--purple);
-    padding: 20px;
     border-radius: 50%;
-    width: 90px;
+    width: 102.7px;
     height: 90px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
+    cursor: pointer;
+}
+.container__icon:hover{
+    background-color: var(--off-black);
 }
 .age{
     font-size: 10.5rem;
@@ -124,8 +139,64 @@ main{
     line-height: 11.4rem;
     margin-top: 4px;
     word-spacing: -4px;
+    letter-spacing: -2px;
 }
 .age__value{
     color: var(--purple);
     padding-right: 9px;
+    word-spacing: 0px;
+}
+.error label{
+    color: var(--light-red);
+}
+.error input{
+    border-color: var(--light-red);
+}
+.error p{
+    color: var(--light-red);
+    font-size: 1.4rem;
+    font-style: italic;
+    margin-top: 9px;
+}
+
+@media (max-width: 425px){
+    .container{
+        padding: 50px 26px;
+        width: 90%;
+        min-width: 320px;
+    }
+    .inputDate{
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+    .inputDate__part label{
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+    }
+    .inputDate__part input{
+        font-size: 1.8rem;
+        padding: 13px;
+        height: 50px;
+        width: 85px;
+    }
+    .container__medium{
+        position: relative;
+        height: 90px;
+        margin-top: 18px;
+    }
+    .container__icon{
+        position: absolute;
+        left: 50%;
+        transform: translatex(-50%);
+        height: 60px;
+        width: 60px;
+    }
+    .container__icon img{
+        height: 25px;
+    }
+    .age{
+        font-size: 5.4rem;
+        line-height: 6.5rem;
+    }
 }

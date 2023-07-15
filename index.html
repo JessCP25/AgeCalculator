@@ -12,28 +12,32 @@
     <div class="container">
       <div class="inputDate">
         <div class="inputDate__part">
-          <label for="">DAY</label>
-          <input placeholder="DD" type="number" name="" id="">
+          <label for="dayAge">DAY</label>
+          <input required placeholder="DD" type="number" name="age" id="dayAge">
+          <p id="messageError"></p>
         </div>
         <div class="inputDate__part">
-          <label for="">MONTH</label>
-          <input placeholder="MM" type="number" name="" id="">
+          <label for="monthAge">MONTH</label>
+          <input required placeholder="MM" type="number" name="age" id="monthAge">
+          <p id="messageError"></p>
         </div>
         <div class="inputDate__part">
-          <label for="">YEAR</label>
-          <input placeholder="YYYY" type="number" name="" id="">
+          <label for="yearAge">YEAR</label>
+          <input required placeholder="YYYY" type="number" name="age" id="yearAge">
+          <p id="messageError"></p>
         </div>
       </div>
       <div class="container__medium">
-        <div class="container__line"></div>
-        <div class="container__icon">
-          <img src="./assets/images/icon-arrow.svg" alt="">
+        <div class="container__line">
         </div>
+        <button class="container__icon" id="button">
+          <img src="./assets/images/icon-arrow.svg" alt="">
+        </button>
       </div>
       <div class="age">
-        <p><span class="age__value">- -</span>years</p>
-        <p><span class="age__value">- -</span>months</p>
-        <p><span class="age__value">- -</span>days</p>
+        <p><span id="resultYear" class="age__value">- -</span>years</p>
+        <p><span id="resultMonth" class="age__value">- -</span>months</p>
+        <p><span id="resultDay" class="age__value">- -</span>days</p>
       </div>
     </div>
   </main>
